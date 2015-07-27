@@ -9,9 +9,12 @@
  *********************************************************************************************/
 
 public class Percolation {
+    /**
+     * Internal class representing a percolation site within percolation system
+     */
     private class Site {
-        int id;
-        boolean open;
+        int id;                 // id used to identify site connectivity with other sites
+        boolean open;           // true if site is open, false if site is blocked
     }
 
     private QuickFindUF uf;     // union-find data structure to keep track of system connectivity
