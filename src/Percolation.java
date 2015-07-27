@@ -17,7 +17,7 @@ public class Percolation {
         boolean open;           // true if site is open, false if site is blocked
     }
 
-    private QuickFindUF uf;     // union-find data structure to keep track of system connectivity
+    private WeightedQuickUnionUF uf;     // union-find data structure to keep track of system connectivity
     private Site[][] grid;      // 2D array data structure to keep to map system
     private int top;            // virtual site connecting the top sites
     private int bottom;         // virtual site connecting the bottom sites
@@ -31,7 +31,7 @@ public class Percolation {
     public Percolation(int N) {
         if (N <= 0) throw new IllegalArgumentException();
         size = N;
-        uf = new QuickFindUF(N * N + 2);
+        uf = new WeightedQuickUnionUF(N * N + 2);
         int id = 0;
         top = id++;
         grid = new Site[N][N];
