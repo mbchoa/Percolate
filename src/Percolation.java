@@ -1,3 +1,5 @@
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
+
 /*********************************************************************************************
  * Name: Michael-Bryant Choa
  * Date: July 26, 2015

@@ -1,3 +1,7 @@
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.StdStats;
+
 /*********************************************************************************************
  * Name: Michael-Bryant Choa
  * Date: July 27, 2015
@@ -28,7 +32,7 @@ public class PercolationStats {
             Percolation p = new Percolation(N);
             int numOpenSites = 0;
             while(!p.percolates()) {
-                int row = StdRandom.uniform(1, N+1);
+                int row = StdRandom.uniform(1, N + 1);
                 int col = StdRandom.uniform(1, N+1);
                 if(!p.isOpen(row, col)) {
                     p.open(row, col);
